@@ -5,11 +5,11 @@ import 'swiper/css'
 import 'swiper/css/autoplay'
 
 const images = [
-    '/public/Partenrs/cropped-الشعاار-1-164x43.png',
-    '/public/Partenrs/download (24).png',
-    '/public/Partenrs/logo(arkan)-DWyeMILx.png',
-    '/public/Partenrs/logo-BEirJ3uM.png',
-    '/public/Partenrs/لوجو نقابة الكيميائيين العراقية  1-CH3xefoU.svg',
+    '/Partenrs/cropped-الشعاار-1-164x43.png',
+    '/Partenrs/download (24).png',
+    '/Partenrs/logo(arkan)-DWyeMILx.png',
+    '/Partenrs/logo-BEirJ3uM.png',
+    '/Partenrs/لوجو نقابة الكيميائيين العراقية  1-CH3xefoU.svg',
 
   ]
 const SwiperTwo = () => {

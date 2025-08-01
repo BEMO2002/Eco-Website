@@ -6,6 +6,7 @@ import Layout from "./Layout";
 import HomePage from "./HomePage/Index";
 import MainServices from "./Services/MainServices";
 import ScrollToTop from "./ScrollToTop";
+import MainProjects from "./ProjectsPage/MainProjects";
 function App() {
   return (
     <BrowserRouter>
@@ -14,9 +15,12 @@ function App() {
         <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         </Route>
-        <Route path="/services" element={<Layout />}>
-        <Route index element={<MainServices />} />
-        </Route>
+            <Route path="/services" element={<Layout />}>
+            <Route index element={<MainServices />} />
+            </Route>
+            <Route path="/portfolio" element={<Layout />}>
+            <Route index element={<MainProjects />} />
+            </Route>
       </Routes>
     </BrowserRouter>
   );
