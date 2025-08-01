@@ -1,10 +1,10 @@
-import React from 'react'
-import team from '../assets/Team/team.png'
+import React from "react";
+import team from "../assets/team/team.png";
 const HeadTeam = () => {
   return (
-    <div className='relative'>
-                    {/* Animated Background Shapes */}
-                    <div className="absolute inset-0 pointer-events-none">
+    <div className="relative">
+      {/* Animated Background Shapes */}
+      <div className="absolute inset-0 pointer-events-none">
         {/* Floating Circles */}
         <div className="absolute top-1/4 left-1/6 w-6 h-6 bg-primary/20 rounded-full animate-float-scale"></div>
         <div className="absolute top-1/3 right-1/4 w-4 h-4 bg-second/30 rounded-full animate-bounce-scale"></div>
@@ -25,11 +25,11 @@ const HeadTeam = () => {
         <div className="absolute bottom-1/6 left-2/3 w-2 h-2 bg-primary/30 rounded-full animate-bounce-scale"></div>
         <div className="absolute top-1/4 right-1/3 w-2 h-2 bg-third/25 rounded-full animate-pulse-scale"></div>
       </div>
-        <div className="container mx-auto py-30">
-            <img src={team} alt=""  className='mx-auto'/>
-        </div>
+      <div className="container mx-auto py-30">
+        <img src={team} alt="" className="mx-auto" />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeadTeam
+export default HeadTeam;

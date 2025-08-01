@@ -117,22 +117,7 @@ const Team = () => {
                   <h3 className="text-lg font-bold mb-2 mt-2">{member.name}</h3>
                   <p className="text-sm opacity-90">{member.position}</p>
                 </div>
-
-                {/* Social Media Icons */}
-                <div className="flex justify-center gap-4 mt-6">
-                  <a
-                    href="#"
-                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors duration-200"
-                  >
-                    <FaLinkedin className="text-white text-lg" />
-                  </a>
-                  <a
-                    href="#"
-                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors duration-200"
-                  >
-                    <FaGithub className="text-white text-lg" />
-                  </a>
-                </div>
+  
               </div>
             </div>
           ))}
