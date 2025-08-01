@@ -1,16 +1,10 @@
-import React from "react";
-import imageHeader from "../assets/Projects/project.png";
-const Header = () => {
+import React from 'react'
+import team from '../assets/Team/team.png'
+const HeadTeam = () => {
   return (
-    <div className="relative">
-      <div>
-        <img src={imageHeader} alt="" className="py-20" />
-      </div>
-      <div className='flex items-center justify-center p-2 px-6 bg-second text-white  w-fit mx-auto rounded-full  gap-3 mb-8'>
-      <h2 className="text-center font-bold text-xl md:text-2xl ">Portfolio</h2>
-      </div>
-            {/* Animated Background Shapes */}
-            <div className="absolute inset-0 pointer-events-none">
+    <div className='relative'>
+                    {/* Animated Background Shapes */}
+                    <div className="absolute inset-0 pointer-events-none">
         {/* Floating Circles */}
         <div className="absolute top-1/4 left-1/6 w-6 h-6 bg-primary/20 rounded-full animate-float-scale"></div>
         <div className="absolute top-1/3 right-1/4 w-4 h-4 bg-second/30 rounded-full animate-bounce-scale"></div>
@@ -31,7 +25,11 @@ const Header = () => {
         <div className="absolute bottom-1/6 left-2/3 w-2 h-2 bg-primary/30 rounded-full animate-bounce-scale"></div>
         <div className="absolute top-1/4 right-1/3 w-2 h-2 bg-third/25 rounded-full animate-pulse-scale"></div>
       </div>
+        <div className="container mx-auto py-30">
+            <img src={team} alt=""  className='mx-auto'/>
+        </div>
     </div>
-  );
-};
-export default Header;
+  )
+}
+
+export default HeadTeam

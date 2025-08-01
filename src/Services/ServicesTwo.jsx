@@ -1,22 +1,24 @@
 import React from "react";
-import { 
-  FaBullhorn, 
-  FaSearch, 
-  FaChartPie, 
-  FaNetworkWired, 
-  FaMobile, 
-  FaChartBar, 
-  FaEnvelope 
+import {
+  FaBullhorn,
+  FaSearch,
+  FaChartPie,
+  FaNetworkWired,
+  FaMobile,
+  FaChartBar,
+  FaEnvelope,
+  FaShieldAlt,
 } from "react-icons/fa";
 import { BiCodeAlt } from "react-icons/bi";
 
-const Services = () => {
+const ServicesTwo = () => {
   const services = [
     {
       id: 1,
       icon: <FaBullhorn className="w-8 h-8" />,
       title: "Social Media Management",
-      description: "Build your presence. Engage your audience. Grow your brand.",
+      description:
+        "Build your presence. Engage your audience. Grow your brand.",
     },
     {
       id: 2,
@@ -28,7 +30,8 @@ const Services = () => {
       id: 3,
       icon: <FaChartPie className="w-8 h-8" />,
       title: "Social Ads",
-      description: "Targeted ad campaigns across the Meta network, Google and more.",
+      description:
+        "Targeted ad campaigns across the Meta network, Google and more.",
     },
     {
       id: 4,
@@ -40,32 +43,42 @@ const Services = () => {
       id: 5,
       icon: <FaSearch className="w-8 h-8" />,
       title: "SEO Optimization",
-      description: "The process of developing websites to suit the requirements of different search engines",
+      description:
+        "The process of developing websites to suit the requirements of different search engines",
     },
     {
       id: 6,
       icon: <FaMobile className="w-8 h-8" />,
       title: "Mobile App Development",
-      description: "Create the perfect mobile app with the professional app developers at PROMPTECH",
+      description:
+        "Create the perfect mobile app with the professional app developers at PROMPTECH",
     },
     {
       id: 7,
       icon: <FaChartBar className="w-8 h-8" />,
       title: "Media Production",
-      description: "media production services include video production, audio production, and more",
+      description:
+        "media production services include video production, audio production, and more",
     },
     {
       id: 8,
       icon: <FaEnvelope className="w-8 h-8" />,
       title: "Email Marketing",
-      description: "Email marketing is a powerful tool for building relationships with customers, promoting products",
+      description:
+        "Email marketing is a powerful tool for building relationships with customers, promoting products",
+    },
+    {
+      id: 9,
+      icon: <FaShieldAlt className="w-8 h-8" />,
+      title: "Cybersecurity Services",
+      description:
+        "Protect your digital assets with comprehensive security solutions including penetration testing, vulnerability assessment,",
     },
   ];
 
   return (
     <div className="container mx-auto py-30 px-4">
-
-<div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Triangle 1 */}
         <div className="absolute top-1/4 left-1/6 w-0 h-0 border-l-[20px] border-r-[20px] border-b-[35px] border-l-transparent border-r-transparent border-b-primary/20 animate-float-scale"></div>
 
@@ -107,15 +120,15 @@ const Services = () => {
               "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
           }}
         ></div>
-      </div>      <div className="text-center mb-4">
-      <h2 className="font-bol mx-auto text-lg p-2 px-6 bg-second text-white w-fit rounded-full md:text-3xl  mb-4">
+      </div>{" "}
+      <div className="text-center mb-4">
+        <h2 className="font-bol mx-auto text-lg p-2 px-6 bg-second text-white w-fit rounded-full md:text-3xl  mb-4">
           Our Services
         </h2>
         <h2 className="text-xl font-bold text-base mb-2">
           Stay Ahead Of The Competition With Our Advanced SEO Services
         </h2>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
         {services.map((service) => (
           <div key={service.id} className="group cursor-pointer">
@@ -124,9 +137,9 @@ const Services = () => {
               {/* Icon Container */}
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center shadow-sm">
-                <div className="text-second transition-transform duration-300 group-hover:rotate-360">
-  {service.icon}
-</div>
+                  <div className="text-second transition-transform duration-300 group-hover:rotate-360">
+                    {service.icon}
+                  </div>
                 </div>
               </div>
 
@@ -142,8 +155,8 @@ const Services = () => {
 
               {/* Read More Button */}
               <div className="text-center">
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="text-base font-medium underline hover:text-primary transition-colors inline-flex items-center"
                 >
                   Read More →
@@ -157,4 +170,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesTwo;

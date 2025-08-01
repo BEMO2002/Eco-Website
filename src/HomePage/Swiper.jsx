@@ -17,7 +17,7 @@ const SwiperTwo = () => {
         <div className='relative'>
 
         <div className="w-full max-w-6xl mx-auto py-4 px-2 pt-30">
-                <div className='flex items-center justify-center p-2 px-6 bg-second text-white  w-fit mx-auto rounded-full  gap-3 mb-8'>
+        <div className='flex items-center justify-center p-2 px-6 bg-second text-white  w-fit mx-auto rounded-full  gap-3 mb-8'>
       <h2 className="text-center font-bold text-xl md:text-2xl ">Our Partners</h2>
       </div>
       {/* Animated Floating Circles */}

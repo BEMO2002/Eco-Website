@@ -7,6 +7,7 @@ import HomePage from "./HomePage/Index";
 import MainServices from "./Services/MainServices";
 import ScrollToTop from "./ScrollToTop";
 import MainProjects from "./ProjectsPage/MainProjects";
+import MainTeam from "./TeamPage/MainTeam";
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +21,9 @@ function App() {
             </Route>
             <Route path="/portfolio" element={<Layout />}>
             <Route index element={<MainProjects />} />
+            </Route>
+            <Route path="/team" element={<Layout />}>
+            <Route index element={<MainTeam />} />
             </Route>
       </Routes>
     </BrowserRouter>

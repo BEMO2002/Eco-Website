@@ -1,10 +1,10 @@
 import React from 'react'
-import Services from './Services'
+import ServicesTwo from './ServicesTwo'
 import  Create  from '../HomePage/Create'
 const MainServices = () => {
   return (
     <div>
-        <Services/>
+        <ServicesTwo/>
         <Create/>
     </div>
   )
