@@ -9,10 +9,13 @@ import { GrProjects } from "react-icons/gr";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaFacebook,
-  FaTwitter,
+
   FaLinkedin,
   FaWhatsapp,
-  FaYoutube,
+
+  FaPhoneAlt,
+  FaEnvelope,
+  FaInstagram,
 } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 
@@ -234,17 +237,15 @@ const Navbar = () => {
                   <FaFacebook className="text-gray-700" />
                 </div>
                 <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 cursor-pointer transition-colors duration-200">
-                  <FaTwitter className="text-gray-700" />
-                </div>
+                  <FaInstagram className="text-gray-700" />
+                </div>  
                 <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 cursor-pointer transition-colors duration-200">
                   <FaLinkedin className="text-gray-700" />
                 </div>
                 <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 cursor-pointer transition-colors duration-200">
                   <FaWhatsapp className="text-gray-700" />
                 </div>
-                <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 cursor-pointer transition-colors duration-200">
-                  <FaYoutube className="text-gray-700" />
-                </div>
+
               </div>
 
               {/* Get In Touch Section */}
@@ -252,10 +253,22 @@ const Navbar = () => {
                 <h3 className="text-lg font-bold text-gray-800 mb-4">
                   Get In Touch
                 </h3>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-5">
                   <HiLocationMarker className="text-base mt-1 flex-shrink-0" />
                   <p className="text-gray-600 text-sm">
-                    81 Mohammed Al Mokhtar Street, Cairo, Egypt
+                    Tanta, Egypt
+                  </p>
+                </div>
+                <div className="flex items-start gap-5 mt-2">
+                  <FaPhoneAlt className="text-base mt-1 flex-shrink-0" />
+                  <p className="text-gray-600 text-sm">
+                    +201044847442
+                  </p>
+                </div>
+                <div className="flex items-start gap-5 mt-2">
+                  <FaEnvelope className="text-base mt-1 flex-shrink-0" />
+                  <p className="text-gray-600 text-sm">
+                    ecosyt.company@gmail.com
                   </p>
                 </div>
               </div>

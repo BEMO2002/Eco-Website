@@ -8,6 +8,7 @@ import MainServices from "./Services/MainServices";
 import ScrollToTop from "./ScrollToTop";
 import MainProjects from "./ProjectsPage/MainProjects";
 import MainTeam from "./TeamPage/MainTeam";
+import MainContact from "./ContactPage/MainContact";
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route path="/team" element={<Layout />}>
             <Route index element={<MainTeam />} />
+            </Route>
+            <Route path="/contact" element={<Layout />}>
+            <Route index element={<MainContact />} />
             </Route>
       </Routes>
     </BrowserRouter>

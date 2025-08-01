@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { TfiArrowTopRight } from "react-icons/tfi";
 import image1 from "../assets/Home/undraw_online-test_cqv0.svg";
@@ -7,31 +7,45 @@ import image3 from "../assets/Home/undraw_web-app_141a.svg";
 import looder from "../assets/Home/Frame 1618871548.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../Framermotion/Varient";
+
 const ProfessionalCarousel = ({ items, autoPlay = true, interval = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const timerRef = useRef(null);
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === items.length - 1 ? 0 : prevIndex + 1
     );
+    resetTimer();
   };
 
   const goToPrev = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? items.length - 1 : prevIndex - 1
     );
+    resetTimer();
   };
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
+    resetTimer();
+  };
+
+  const resetTimer = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
   };
 
   useEffect(() => {
     if (!autoPlay || isPaused) return;
 
-    const timer = setTimeout(goToNext, interval);
-    return () => clearTimeout(timer);
+    timerRef.current = setTimeout(goToNext, interval);
+
+    return () => {
+      resetTimer();
+    };
   }, [currentIndex, isPaused]);
 
   return (
@@ -39,9 +53,11 @@ const ProfessionalCarousel = ({ items, autoPlay = true, interval = 5000 }) => {
       className="relative bg-baseThree z-2 w-full h-[90vh] max-h-screen overflow-hidden lg:pt-20 md:pt-40 pt-20"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
+      aria-live="polite"
+      aria-atomic="true"
     >
       {/* Animated Floating Circles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-5">
         {/* Circle 1 */}
         <div className="absolute top-1/4 left-1/6 w-4 h-4 bg-primary/30 rounded-full animate-float-scale"></div>
 
@@ -62,7 +78,6 @@ const ProfessionalCarousel = ({ items, autoPlay = true, interval = 5000 }) => {
 
         {/* Circle 7 */}
         <div className="absolute bottom-1/2 left-1/6 w-6 h-6 bg-primary/20 rounded-full animate-bounce-scale"></div>
-
       </div>
 
       {/* Slides */}
@@ -75,14 +90,15 @@ const ProfessionalCarousel = ({ items, autoPlay = true, interval = 5000 }) => {
                 ? "opacity-100"
                 : "opacity-0 pointer-events-none"
             }`}
+            aria-hidden={index !== currentIndex}
           >
             <img
               src={looder}
               alt=""
-              className="absolute opacity-10 md:opacity-100 md:right-20 right-0 top-0 w-40 animate-spin"
+              className="absolute opacity-10 md:opacity-100 md:right-20 right-0 top-0 w-40 animate-spin z-5"
             />
 
-            <div className="container mx-auto px-4 py-12 -z-10">
+            <div className="container mx-auto px-4 py-12 relative z-10">
               <div className="flex flex-col lg:flex-row items-center text-center md:text-left gap-8 lg:gap-12">
                 {/* Text Section */}
                 <motion.div
@@ -90,10 +106,10 @@ const ProfessionalCarousel = ({ items, autoPlay = true, interval = 5000 }) => {
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: false, amount: 0 }}
-                  className="w-full lg:w-1/2 z-50"
+                  className="w-full lg:w-1/2 relative z-20"
                 >
                   {item.paragraph && (
-                    <h2 className="text-lg p-2 px-4 w-fit mx-auto md:mx-0 border border-base rounded-full font-semibold mb-4 text-black leading-tight">
+                    <h2 className="text-lg p-2 px-4 w-fit mx-auto md:mx-0 border border-base hover:bg-second hover:text-white transition-all duration-300 cursor-pointer rounded-full font-semibold mb-4 text-black leading-tight">
                       {item.paragraph}
                     </h2>
                   )}
@@ -119,7 +135,7 @@ const ProfessionalCarousel = ({ items, autoPlay = true, interval = 5000 }) => {
             cursor-pointer transition-all duration-500 ease-out
             shadow-[inset_0_0_0_0_#000]
             hover:text-white hover:shadow-[inset_0_-100px_0_0_#000]
-            active:scale-90"
+            active:scale-90 z-30"
                     >
                       {item.cta}
                       <TfiArrowTopRight className="inline-block ml-2 text-xl" />
@@ -131,13 +147,13 @@ const ProfessionalCarousel = ({ items, autoPlay = true, interval = 5000 }) => {
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: false, amount: 0 }}
-                  className="w-full lg:w-1/2 relative"
+                  className="w-full lg:w-1/2 relative z-10"
                 >
                   <div className="relative w-full h-full flex items-center justify-center">
                     <img
                       src={item.image}
                       alt={item.alt || `Slide ${index + 1}`}
-                      className="w-full h-auto md:max-h-[400px] max-h-[300px] object-contain rounded-xl relative z-10"
+                      className="w-full h-auto md:max-h-[400px] max-h-[300px] object-contain rounded-xl"
                     />
                   </div>
                 </motion.div>
@@ -175,6 +191,7 @@ const ProfessionalCarousel = ({ items, autoPlay = true, interval = 5000 }) => {
                 : "bg-primary hover:bg-second"
             }`}
             aria-label={`Go to slide ${index + 1}`}
+            aria-current={index === currentIndex}
           />
         ))}
       </div>

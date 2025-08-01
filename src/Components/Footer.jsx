@@ -3,28 +3,25 @@ import {
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhoneAlt,
-  FaGithub,
   FaLinkedin,
   FaFacebook,
+  FaInstagram,
 } from "react-icons/fa";
 import logo from "../assets/Home/Frame 1618871548.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-second md:rounded-t-[120px] rounded-t-[50px] text-white pt-8 pb-8 px-4 md:px-8">
+    <footer className="bg-second md:rounded-t-[120px] rounded-t-[50px] text-white pt-20 pb-8 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Main Title */}
-        <div className="text-center mb-12">
-          <h1 className="lg:text-[96px] text-5xl font-bold text-white mb-8">Eco System</h1>
-        </div>
-
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
           {/* Left - Circuit Graphic */}
           <div className="flex justify-center lg:justify-start">
-
-              <img src={logo} alt="Logo" className="md:w-[334px] w-[200px] mx-auto" />
-
+            <img
+              src={logo}
+              alt="Logo"
+              className="md:w-[334px] w-[200px] mx-auto"
+            />
           </div>
 
           {/* Center - Description & Links */}
@@ -39,9 +36,15 @@ const Footer = () => {
 
             {/* Social Media Icons */}
             <div className="flex justify-center lg:justify-start gap-6 mb-8">
-              <FaGithub className="w-8 h-8 text-white hover:text-primary cursor-pointer transition-colors" />
-              <FaLinkedin className="w-8 h-8 text-white hover:text-primary cursor-pointer transition-colors" />
-              <FaFacebook className="w-8 h-8 text-white hover:text-primary cursor-pointer transition-colors" />
+              <a href="https://www.instagram.com/eco.syst/">
+                <FaInstagram className="w-8 h-8 text-white hover:text-primary cursor-pointer transition-colors" />
+              </a>
+              <a href="https://www.linkedin.com/company/ecosyst220/">
+                <FaLinkedin className="w-8 h-8 text-white hover:text-primary cursor-pointer transition-colors" />
+              </a>
+              <a href="https://www.facebook.com/share/16hSNfdLRG/">
+                <FaFacebook className="w-8 h-8 text-white hover:text-primary cursor-pointer transition-colors" />
+              </a>
             </div>
 
             {/* Navigation Links */}
@@ -75,17 +78,15 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <FaMapMarkerAlt className="mt-1 text-primary flex-shrink-0" />
-                  <span className="text-sm">
-                    2715 Ash Dr. San Jose, South Dakota 83475
-                  </span>
+                  <span className="text-sm">Tanta, Egypt</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <FaEnvelope className="mt-1 text-primary flex-shrink-0" />
-                  <span className="text-sm">nevaeh.simmons@example.com</span>
+                  <span className="text-sm">ecosyt.company@gmail.com</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <FaPhoneAlt className="mt-1 text-primary flex-shrink-0" />
-                  <span className="text-sm">+7-445-553-3864</span>
+                  <span className="text-sm">+201044847442</span>
                 </li>
               </ul>
             </div>
@@ -127,7 +128,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center pt-8 border-t border-white/20">
           <p className="text-sm text-white">
-            © 2020 – 2022 Anron. Built with ECOSYST. All rights reserved.
+            © 2025 Eco System. All rights reserved.
           </p>
         </div>
       </div>

@@ -6,10 +6,10 @@ import {
   FaNetworkWired,
   FaMobile,
   FaChartBar,
-  FaEnvelope,
+
   FaShieldAlt,
 } from "react-icons/fa";
-import { BiCodeAlt } from "react-icons/bi";
+
 
 const ServicesTwo = () => {
   const services = [
@@ -60,19 +60,13 @@ const ServicesTwo = () => {
       description:
         "media production services include video production, audio production, and more",
     },
+
     {
       id: 8,
-      icon: <FaEnvelope className="w-8 h-8" />,
-      title: "Email Marketing",
-      description:
-        "Email marketing is a powerful tool for building relationships with customers, promoting products",
-    },
-    {
-      id: 9,
       icon: <FaShieldAlt className="w-8 h-8" />,
       title: "Cybersecurity Services",
       description:
-        "Protect your digital assets with comprehensive security solutions including penetration testing, vulnerability assessment,",
+        "Protect your digital assets with comprehensive security solutions including penetration testing, ",
     },
   ];
 
