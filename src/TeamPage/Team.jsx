@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import shape1 from '../assets/Team/Ellipse 48.svg'
-import shape2 from '../assets/Team/Ellipse 49.svg'
-import shape from '../assets/Projects/تصميم بدون عنوان (64) 1.png'
+import shape1 from "../assets/team/Ellipse 48.svg";
+import shape2 from "../assets/team/Ellipse 49.svg";
+import shape from "../assets/Projects/تصميم بدون عنوان (64) 1.png";
 const Team = () => {
   const [teamMembers, setTeamMembers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -51,13 +51,13 @@ const Team = () => {
 
   return (
     <div className="min-h-screen  py-16 px-4 relative">
-              <img
+      <img
         src={shape}
         alt=""
         className="absolute bottom-7  left-0  hidden md:block"
       />
-                    {/* Animated Background Shapes */}
-                    <div className="absolute inset-0 pointer-events-none">
+      {/* Animated Background Shapes */}
+      <div className="absolute inset-0 pointer-events-none">
         {/* Floating Circles */}
         <div className="absolute top-1/4 left-1/6 w-6 h-6 bg-primary/20 rounded-full animate-float-scale"></div>
         <div className="absolute top-1/3 right-1/4 w-4 h-4 bg-second/30 rounded-full animate-bounce-scale"></div>
@@ -117,7 +117,6 @@ const Team = () => {
                   <h3 className="text-lg font-bold mb-2 mt-2">{member.name}</h3>
                   <p className="text-sm opacity-90">{member.position}</p>
                 </div>
-  
               </div>
             </div>
           ))}
